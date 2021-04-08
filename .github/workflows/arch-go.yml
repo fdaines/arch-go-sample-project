@@ -1,0 +1,18 @@
+name: 'arch-go'
+description: 'Runs the Arch-Go tool'
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - actions
+
+jobs:
+  core:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install Arch-Go
+        run: go get -u github.com/fdaines/arch-go
+      - name: Run Arch-Go
+        run: arch-go
