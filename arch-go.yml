@@ -1,0 +1,13 @@
+dependenciesRules:
+  - package: "**.presentation"
+    shouldOnlyDependsOn:
+      - "**.businesslogic"
+  - package: "**.businesslogic"
+    shouldOnlyDependsOn:
+      - "**.persistence"
+    shouldNotDependsOn:
+      - "**.presentation"
+  - package: "**.persistence"
+    shouldNotDependsOn:
+      - "**.presentation"
+      - "**.businesslogic"
