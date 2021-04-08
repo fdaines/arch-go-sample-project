@@ -1,5 +1,4 @@
 name: 'arch-go'
-description: 'Runs the Arch-Go tool'
 
 on:
   workflow_dispatch:
